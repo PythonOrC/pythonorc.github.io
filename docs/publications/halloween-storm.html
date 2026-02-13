@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween Storm - Hongyi Hu</title>
+    <meta name="description" content="Investigating the Space Weather Impact of the 2003 Halloween Geomagnetic Storm">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>(function () { try { var s = localStorage.getItem('theme'); var t = s === 'dark' || s === 'light' ? s : 'light'; document.documentElement.setAttribute('data-theme', t) } catch (e) { document.documentElement.setAttribute('data-theme', 'light') } })();</script>
+</head>
+
+<body class="bg-global-bg text-global-text antialiased subpage-body">
+    <header class="subpage-header">
+        <div class="subpage-header-inner mx-auto max-w-3xl px-4 sm:px-8"><a href="../index.html"
+                class="back-link">&larr; Back to Home</a><button id="theme-toggle"
+                class="flex h-7 w-7 items-center justify-center rounded-md p-1" aria-label="Switch theme"><svg
+                    class="sun-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        clip-rule="evenodd"></path>
+                </svg><svg class="moon-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg></button></div>
+    </header>
+
+    <main class="mx-auto max-w-3xl px-4 sm:px-8 prose">
+        <h1 class="subpage-title">Investigating the Space Weather Impact of the 2003 Halloween Geomagnetic Storm by the
+            Ground Magnetic Field Variations: a Global View</h1>
+        <div class="subpage-meta">
+            <span class="publication-venue">Under revision at AGU Space Weather</span>
+            <span class="subpage-year">2024&ndash;present</span>
+        </div>
+        <div class="subpage-authors">Hongyi Hu (First &amp; Corresponding Author), Zhonghua Xu</div>
+        <div class="subpage-tags">
+            <span class="tag tag-workshop">Under Review</span>
+            <span class="tag tag-interpretability">Space Weather</span>
+        </div>
+
+        <section class="subpage-section">
+            <h2>Abstract</h2>
+            <p>Geomagnetic disturbances caused by solar events can have significant impacts on technology on Earth
+                through the creation of geomagnetically induced currents (GICs). This study utilizes the Global-GMD
+                model to perform an error analysis of space weather impacts during the October 29th, 2003, Halloween
+                Storm and evaluate how station spacing affects storm-time mapping accuracy. The analysis focuses on
+                small-scale local geomagnetic disturbances at high-latitude regions, particularly areas like Alaska,
+                where features less than 170 km are evident during periods of heightened geomagnetic activity.</p>
+            <p>Results indicate that while high-latitude regions experience intense, localized geomagnetic disturbances,
+                the Continental US stations&mdash;located at mid-magnetic latitudes with moderate geomagnetic
+                disturbances (200&sim;400 nT)&mdash;exhibit the highest relative errors. This is attributed to limited
+                spatial coverage, with station spacing near BOU around 1000 km, highlighting the importance of enhancing
+                monitoring networks to improve the accuracy of space weather impact assessments.</p>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Key Points</h2>
+            <ul class="subpage-highlights">
+                <li>Small-scale (&lt;170 km) high-latitude features exist during storms; mapping accuracy depends on
+                    these structures and station spacing.</li>
+                <li>CONUS mid-latitude stations (&Delta;B &sim; 200&ndash;400 nT) show highest relative errors due to
+                    long baselines (~1000 km) and coverage gaps, not extremes.</li>
+                <li>Recommends &le;150 km spacing in auroral/sub-auroral zones and targeted gap-filling at mid-latitudes
+                    (e.g., BOU region).</li>
+                <li>Seven representative stations analyzed across high, mid, and low latitudes: FYU, SMI, B17, BOU, NGK,
+                    KAK, PAC.</li>
+                <li>NGK (Europe, dense coverage, 398.7 km avg. spacing) achieves 5.46% median relative error vs. BOU
+                    (US, sparse, 1220.6 km) at 38.08%.</li>
+                <li>2-D magnetometer arrays prove more effective than 1-D arrays for capturing localized storm features.
+                </li>
+            </ul>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Links</h2>
+            <div class="subpage-links">
+                <span class="subpage-link-btn" style="opacity:0.5;cursor:default;">Paper (under revision)</span>
+                <span class="subpage-link-btn" style="opacity:0.5;cursor:default;">GitHub (under revision)</span>
+            </div>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Results</h2>
+            <figure style="margin:1.5rem 0;">
+                <img src="../assets/halloween-errormap.jpg" alt="Error map of the 2003 Halloween storm"
+                    style="max-width:600px;width:100%;border-radius:8px;display:block;margin:0 auto;" loading="lazy" />
+                <figcaption style="text-align:center;font-size:0.85rem;opacity:0.75;margin-top:0.5rem;">Global error map
+                    of geomagnetic disturbances during the 2003 Halloween storm.</figcaption>
+            </figure>
+            <figure style="margin:1.5rem 0;">
+                <img src="../assets/halloween-station-error.png"
+                    alt="Individual station errors during the Halloween storm"
+                    style="max-width:600px;width:100%;border-radius:8px;display:block;margin:0 auto;" loading="lazy" />
+                <figcaption style="text-align:center;font-size:0.85rem;opacity:0.75;margin-top:0.5rem;">Individual
+                    station errors during the storm.</figcaption>
+            </figure>
+        </section>
+
+
+    </main>
+    <div class="mx-auto max-w-3xl px-4 sm:px-8 py-8 text-center text-sm opacity-75">
+        <p>&copy; Hongyi (Ethan) Hu</p>
+    </div>
+    <script src="../subpage.js"></script>
+</body>
+
+</html>

@@ -1,121 +1,59 @@
 # Publications
 
-## 2026
+## 2023
 
 <div class="publication-card">
-    <div class="publication-image">
-        <img src="assets/infusion_big_figure.jpg" alt="Infusion publication">
-    </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="https://arxiv.org/abs/2602.09987" class="publication-link">
-                Infusion: Shaping Model Behavior by Editing Training Data via Influence Functions
+            <a href="publications/global-gmds.html" class="publication-link">
+                Global-GMDs: The Global Map of Geomagnetic Disturbances
             </a>
         </h3>
-        <div class="publication-venue">Preprint</div>
-        <div class="publication-authors">J Rosser, Robert Kirk, Edward Grefenstette, Jakob Foerster, Laura Ruis</div>
-        <div class="publication-year">2026</div>
+        <div class="publication-venue">Elsevier SoftwareX</div>
+        <div class="publication-authors">Hongyi Hu (First &amp; Corresponding Author), Zhonghua Xu</div>
+        <div class="publication-year">2023</div>
         <div class="publication-tags">
-            <span class="tag tag-safety">AI Security</span>
-            <a href="https://arxiv.org/abs/2602.09987" class="tag tag-arxiv">ARXIV</a>
-            <a href="https://github.com/jrosseruk/infusion" class="tag tag-github">GITHUB</a>
+            <span class="tag tag-conference">Journal</span>
+            <span class="tag tag-interpretability">Space Weather</span>
+            <a href="https://doi.org/10.1016/j.softx.2023.101619" class="tag tag-arxiv">DOI</a>
         </div>
     </div>
 </div>
 
-## 2025
+## Under Review
 
 <div class="publication-card">
-    <div class="publication-image">
-        <img src="assets/AgentBreederDiagramJPG.jpg" alt="AgentBreeder publication">
-    </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="/AgentBreeder" class="publication-link">
-                AgentBreeder: Mitigating the AI Safety Impact of Multi-Agent Scaffolds via Self-Improvement
+            <a href="publications/halloween-storm.html" class="publication-link">
+                Investigating the Space Weather Impact of the 2003 Halloween Geomagnetic Storm by the Ground Magnetic Field Variations: a Global View
             </a>
         </h3>
-        <div class="publication-venue">NeurIPS 2025 spotlight</div>
-        <div class="publication-authors">J Rosser, Jakob Foerster</div>
-        <div class="publication-year">2025</div>
+        <div class="publication-venue">Under revision at AGU Space Weather</div>
+        <div class="publication-authors">Hongyi Hu (First &amp; Corresponding Author), Zhonghua Xu</div>
+        <div class="publication-year">2024&ndash;present</div>
         <div class="publication-tags">
-            <span class="tag tag-safety">Multi-Agent Safety</span>
-            <a href="https://arxiv.org/abs/2502.00757" class="tag tag-arxiv">ARXIV</a>
-            <a href="https://github.com/J-Rosser-UK/AgentBreeder" class="tag tag-github">GITHUB</a>
+            <span class="tag tag-workshop">Under Review</span>
+            <span class="tag tag-interpretability">Space Weather</span>
         </div>
     </div>
 </div>
 
-<div class="publication-card">
-    <div class="publication-image">
-        <img src="assets/stream_jpg.jpg" alt="Stream publication">
-    </div>
-    <div class="publication-content">
-        <h3 class="publication-title">
-            <a href="https://arxiv.org/pdf/2510.19875" class="publication-link">
-                Stream: Scaling Mechanistic Interpretability to Long Context in LLMs via Sparse Attention
-            </a>
-        </h3>
-        <div class="publication-venue">NeurIPS 2025 Mech Interp Workshop</div>
-        <div class="publication-authors">J Rosser, José Luis Redondo García, Gustavo Penha, Konstantina Palla, Hugues Bouchard</div>
-        <div class="publication-year">2025</div>
-        <div class="publication-tags">
-            <span class="tag tag-safety">Mechanistic Interpretability</span>
-            <a href="https://arxiv.org/pdf/2510.19875" class="tag tag-arxiv">ARXIV</a>
-        </div>
-    </div>
-</div>
-
-<div class="publication-card">
-    <div class="publication-image">
-        <img src="assets/mapping_faithful.jpg" alt="Mapping Faithful Reasoning publication">
-    </div>
-    <div class="publication-content">
-        <h3 class="publication-title">
-            <a href="https://openreview.net/pdf?id=NJNr5KbW3m" class="publication-link">
-                Mapping Faithful Reasoning in Language Models
-            </a>
-        </h3>
-        <div class="publication-venue">NeurIPS 2025 Mech Interp Workshop</div>
-        <div class="publication-authors">Jiazheng Li, Andreas Damianou, J Rosser, José Luis Redondo García, Konstantina Palla</div>
-        <div class="publication-year">2025</div>
-        <div class="publication-tags">
-            <span class="tag tag-safety">Mechanistic Interpretability</span>
-            <a href="https://openreview.net/pdf?id=NJNr5KbW3m" class="tag tag-arxiv">ARXIV</a>
-        </div>
-    </div>
-</div>
+## Presentations
 
 <div class="publication-card">
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="https://github.com/jrosseruk/CyberAgentBreeder" class="publication-link">
-                CyberAgentBreeder: An Evolutionary Framework for Breeding LLM Cybersecurity Agents
+            <a href="publications/gem-2024.html" class="publication-link">
+                Global Magnetometer Coverage Efficacy During Geomagnetic Disturbances: A Case Study of the 2003 Halloween Storm
             </a>
         </h3>
-        <div class="publication-venue">UK AISI Bounty Programme • Project</div>
-        <div class="publication-authors">J Rosser, Joe Skinner</div>
-        <div class="publication-year">2025</div>
+        <div class="publication-venue">Geospace Environment Modeling (GEM) 2024 Workshop</div>
+        <div class="publication-authors">Hongyi Hu</div>
+        <div class="publication-year">July 2024</div>
         <div class="publication-tags">
-            <span class="tag tag-safety">Agentic Scaffolds</span>
-            <a href="https://github.com/jrosseruk/CyberAgentBreeder" class="tag tag-github">GITHUB</a>
-        </div>
-    </div>
-</div>
-
-<div class="publication-card">
-    <div class="publication-content">
-        <h3 class="publication-title">
-            <a href="https://www.lesswrong.com/posts/qwAiKvomuAm5ekC4D/subliminal-learning-transmitting-misalignment-via" class="publication-link">
-                Transmitting Misalignment with Subliminal Learning via Paraphrasing
-            </a>
-        </h3>
-        <div class="publication-venue">LessWrong</div>
-        <div class="publication-authors">Matthew Bozoukov, Taywon Min, J Rosser, Callum McDougall</div>
-        <div class="publication-year">2025</div>
-        <div class="publication-tags">
-            <span class="tag tag-safety">AI Safety</span>
-            <a href="https://www.lesswrong.com/posts/qwAiKvomuAm5ekC4D/subliminal-learning-transmitting-misalignment-via" class="tag tag-arxiv">LESSWRONG</a>
+            <span class="tag tag-workshop">Presentation</span>
+            <span class="tag tag-interpretability">Space Weather</span>
         </div>
     </div>
 </div>

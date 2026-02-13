@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Body Robotic Snake - Hongyi Hu</title>
+    <meta name="description" content="Modular soft-body snake robot with inflatable silicone tubes">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>(function(){try{var s=localStorage.getItem('theme');var t=s==='dark'||s==='light'?s:'light';document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}})();</script>
+</head>
+<body class="bg-global-bg text-global-text antialiased subpage-body">
+    <header class="subpage-header"><div class="subpage-header-inner mx-auto max-w-3xl px-4 sm:px-8"><a href="../index.html" class="back-link">&larr; Back to Home</a><button id="theme-toggle" class="flex h-7 w-7 items-center justify-center rounded-md p-1" aria-label="Switch theme"><svg class="sun-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg><svg class="moon-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg></button></div></header>
+
+    <main class="mx-auto max-w-3xl px-4 sm:px-8 prose">
+        <h1 class="subpage-title">Soft Body Robotic Snake</h1>
+        <div class="subpage-meta">
+            <span class="publication-venue">Genius Olympiad 2023 &mdash; Bronze Medal</span>
+            <span class="subpage-year">Aug 2022 &ndash; Jun 2023</span>
+        </div>
+        <div class="subpage-tags">
+            <span class="tag tag-safety">Robotics</span>
+            <span class="tag tag-workshop">Hardware</span>
+        </div>
+
+        <section class="subpage-section">
+            <h2>Abstract</h2>
+            <p>Soft-body robots outperform traditional robotics in situations requiring great flexibility, with applications in medical, search-and-rescue, and environmental domains. This project created a multi-degree-of-freedom modular soft snake robot using pneumatically actuated silicone tubes arranged in a triangular pattern per segment, each providing 3 DoF. The robot implements serpentine and rectilinear locomotion controlled via sinusoidal gait functions distributed across independently controlled segments.</p>
+            <p>Simulia Abaqus FEA simulations were used to optimize silicone body parameters (wall thickness, inner diameter). The mold design went through four iterations to achieve reliable air-tight seals. Four wheel revisions improved speed by 331% (0.68 cm/s &rarr; 2.25 cm/s). The robot features ESP32-based distributed control with I2C communication, remote control via Wi-Fi/MQTT, and real-time video streaming from an ESP32-CAM module.</p>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Key Highlights</h2>
+            <ul class="subpage-highlights">
+                <li>Bronze Medal at the 2023 Genius Olympiad.</li>
+                <li>Modular design: each segment is independent with its own ESP32 controller and solenoid valves for pneumatic actuation.</li>
+                <li>Shore A-10 silicone rubber with 3 inflatable chambers per segment in a triangular pattern for 3-DoF bending.</li>
+                <li>Serpentine locomotion via distributed sinusoidal gait: <code>k = sin(Speed &times; rads + id &times; shift)</code>.</li>
+                <li>FEA-optimized silicone parameters: 4mm wall thickness and 14mm diameter yield maximum bending angle.</li>
+                <li>Four mold iterations and four wheel revisions; final ratchet-style wheels achieved 331% speed improvement.</li>
+                <li>Remote control app built with MIT App Inventor; real-time video stream via ESP32-CAM HTTP server.</li>
+            </ul>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Tech Stack</h2>
+            <ul class="subpage-highlights">
+                <li><strong>Silicone casting (Shore A-10)</strong> &mdash; Custom 4-revision mold design for inflatable tube segments with air-tight seals.</li>
+                <li><strong>Pneumatic actuation (12 kPa)</strong> &mdash; Solenoid valves controlling inflation/deflation of 3 chambers per segment.</li>
+                <li><strong>ESP32 &amp; ESP32-CAM</strong> &mdash; Distributed control via I2C bus, Wi-Fi/MQTT remote control, HTTP video stream.</li>
+                <li><strong>Simulia Abaqus</strong> &mdash; FEA simulation for optimizing wall thickness and chamber diameter.</li>
+                <li><strong>CNC routing &amp; 3D printing</strong> &mdash; Acrylic structural plates (CNC), TPU tires and PLA mounts (3D printed).</li>
+                <li><strong>Arduino</strong> &mdash; Firmware for ESP32 modules controlling gait sequencing and valve states.</li>
+            </ul>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Poster</h2>
+            <figure style="margin:1.5rem 0;">
+                <a href="../assets/soft-body-snake-poster.pdf" target="_blank" rel="noopener">
+                    <img src="../assets/soft-body-snake-poster.jpg" alt="Soft Body Robotic Snake research poster" style="width:100%;border-radius:8px;padding:1rem;background:var(--color-global-bg);box-sizing:border-box;" loading="lazy" />
+                </a>
+                <figcaption style="text-align:center;font-size:0.85rem;opacity:0.75;margin-top:0.5rem;">Click to view full-resolution poster (PDF).</figcaption>
+            </figure>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Documents</h2>
+            <div class="subpage-links">
+                <a href="../assets/soft-body-snake-paper.pdf" target="_blank" rel="noopener" class="subpage-link-btn">Paper (PDF)</a>
+                <a href="../assets/soft-body-snake-poster.pdf" target="_blank" rel="noopener" class="subpage-link-btn">Poster (PDF)</a>
+            </div>
+        </section>
+    </main>
+    <div class="mx-auto max-w-3xl px-4 sm:px-8 py-8 text-center text-sm opacity-75"><p>&copy; Hongyi (Ethan) Hu</p></div>
+    <script src="../subpage.js"></script>
+</body>
+</html>

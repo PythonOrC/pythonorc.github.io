@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global-GMDs - Hongyi Hu</title>
+    <meta name="description" content="Global-GMDs: The Global Map of Geomagnetic Disturbances">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>(function () { try { var s = localStorage.getItem('theme'); var t = s === 'dark' || s === 'light' ? s : 'light'; document.documentElement.setAttribute('data-theme', t) } catch (e) { document.documentElement.setAttribute('data-theme', 'light') } })();</script>
+</head>
+
+<body class="bg-global-bg text-global-text antialiased subpage-body">
+    <header class="subpage-header">
+        <div class="subpage-header-inner mx-auto max-w-3xl px-4 sm:px-8"><a href="../index.html"
+                class="back-link">&larr; Back to Home</a><button id="theme-toggle"
+                class="flex h-7 w-7 items-center justify-center rounded-md p-1" aria-label="Switch theme"><svg
+                    class="sun-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        clip-rule="evenodd"></path>
+                </svg><svg class="moon-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg></button></div>
+    </header>
+
+    <main class="mx-auto max-w-3xl px-4 sm:px-8 prose">
+        <h1 class="subpage-title">Global-GMDs: The Global Map of Geomagnetic Disturbances</h1>
+        <div class="subpage-meta">
+            <span class="publication-venue">Elsevier SoftwareX</span>
+            <span class="subpage-year">2023</span>
+        </div>
+        <div class="subpage-authors">Hongyi Hu (First &amp; Corresponding Author), Zhonghua Xu</div>
+        <div class="subpage-tags">
+            <span class="tag tag-conference">Journal</span>
+            <span class="tag tag-interpretability">Space Weather</span>
+        </div>
+
+        <section class="subpage-section">
+            <h2>Abstract</h2>
+            <p>To improve the understanding and monitoring the impacts of geomagnetic disturbances (GMDs) on power grids globally, the presented software, Global-GMDs, uses magnetic field measurements from geomagnetic observatories worldwide and the Kriging method to generate global maps of GMDs. It provides better observational information during a solar storm to power grid operations and other crucial infrastructures. It can also help researchers to assess the GMDs prediction model by comparing with Global-GMDs maps and to get better understanding of physics mechanisms.</p>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Key Highlights</h2>
+            <ul class="subpage-highlights">
+                <li>Published in Elsevier SoftwareX as first and corresponding author.</li>
+                <li>Uses data from over 200 geomagnetic observatories during the 2003 Halloween Storm, the strongest solar storm in the last three decades.</li>
+                <li>Employs Kriging geostatistical interpolation to generate continuous global maps of GMDs at 0.5&deg; spatial resolution and 1-minute temporal resolution.</li>
+                <li>Validated through cross-validation: 60.1% of stations achieved &le;15% relative MAE, 31.1% between 15&ndash;45%, and only 8.8% above 45%.</li>
+                <li>Reveals that higher-density observatory networks in high-latitude regions (Europe, Canada) significantly improve interpolation accuracy where disturbances are most intense.</li>
+                <li>Global maps trace storm inception in the auroral zone, propagation to mid-latitudes, peak intensity (&gt;2800 nT), and recovery phases.</li>
+            </ul>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Tech Stack</h2>
+            <ul class="subpage-highlights">
+                <li><strong>MATLAB &amp; Mapping Toolbox</strong> &mdash; Data processing, Kriging interpolation, and global map visualization.</li>
+                <li><strong>Python 3, PIL, glob</strong> &mdash; GIF synthesis and post-processing.</li>
+                <li><strong>SuperMAG</strong> &mdash; Ground magnetometer data source (~200 stations).</li>
+                <li><strong>NASA ACE Satellite</strong> &mdash; Solar wind and IMF data.</li>
+            </ul>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Pipeline</h2>
+            <figure style="margin:1.5rem 0;">
+                <img src="../assets/gmd-flowchart-1.png" alt="Global-GMDs pipeline flowchart (part 1)" style="max-width:600px;width:100%;border-radius:8px;display:block;margin:0 auto;" loading="lazy" />
+                <figcaption style="text-align:center;font-size:0.85rem;opacity:0.75;margin-top:0.5rem;">Pipeline flowchart (1/2).</figcaption>
+            </figure>
+            <figure style="margin:1.5rem 0;">
+                <img src="../assets/gmd-flowchart-2.png" alt="Global-GMDs pipeline flowchart (part 2)" style="max-width:600px;width:100%;border-radius:8px;display:block;margin:0 auto;" loading="lazy" />
+                <figcaption style="text-align:center;font-size:0.85rem;opacity:0.75;margin-top:0.5rem;">Pipeline flowchart (2/2).</figcaption>
+            </figure>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Results</h2>
+            <figure style="margin:1.5rem 0;">
+                <img src="../assets/gmd-interpolated.png" alt="Interpolated global map of geomagnetic disturbances" style="max-width:600px;width:100%;border-radius:8px;display:block;margin:0 auto;" loading="lazy" />
+                <figcaption style="text-align:center;font-size:0.85rem;opacity:0.75;margin-top:0.5rem;">Interpolated global map of geomagnetic disturbances.</figcaption>
+            </figure>
+            <figure style="margin:1.5rem 0;">
+                <img src="../assets/gmd-errormap.jpg" alt="Error map showing prediction error at station locations when removed" style="max-width:600px;width:100%;border-radius:8px;display:block;margin:0 auto;" loading="lazy" />
+                <figcaption style="text-align:center;font-size:0.85rem;opacity:0.75;margin-top:0.5rem;">Error map: prediction error at each station location when that station is removed.</figcaption>
+            </figure>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Links</h2>
+            <div class="subpage-links">
+                <a href="https://doi.org/10.1016/j.softx.2023.101619" target="_blank" rel="noopener"
+                    class="subpage-link-btn">Paper (DOI)</a>
+                <a href="https://github.com/PythonOrC/SpaceWeather-SoftwareX" target="_blank" rel="noopener"
+                    class="subpage-link-btn">GitHub</a>
+            </div>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Citation</h2>
+            <pre class="bibtex-block">@article{HU2024101619,
+    title    = {Global-GMDs: The global map of geomagnetic disturbances},
+    journal  = {SoftwareX},
+    volume   = {25},
+    pages    = {101619},
+    year     = {2024},
+    issn     = {2352-7110},
+    doi      = {https://doi.org/10.1016/j.softx.2023.101619},
+    author   = {Hongyi Hu and Zhonghua Xu},
+    keywords = {Geomagnetic disturbances, Magnetic field measurement, Geomagnetic storm, Geomagnetically induced currents},
+}</pre>
+        </section>
+    </main>
+    <div class="mx-auto max-w-3xl px-4 sm:px-8 py-8 text-center text-sm opacity-75">
+        <p>&copy; Hongyi (Ethan) Hu</p>
+    </div>
+    <script src="../subpage.js"></script>
+</body>
+
+</html>

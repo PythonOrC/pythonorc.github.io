@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RobotCar LiDAR Vehicle Detection - Hongyi Hu</title>
+    <meta name="description" content="Vehicle-aware LiDAR projection on the Oxford RobotCar dataset using YOLO segmentation">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>(function(){try{var s=localStorage.getItem('theme');var t=s==='dark'||s==='light'?s:'light';document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}})();</script>
+</head>
+<body class="bg-global-bg text-global-text antialiased subpage-body">
+    <header class="subpage-header"><div class="subpage-header-inner mx-auto max-w-3xl px-4 sm:px-8"><a href="../index.html" class="back-link">&larr; Back to Home</a><button id="theme-toggle" class="flex h-7 w-7 items-center justify-center rounded-md p-1" aria-label="Switch theme"><svg class="sun-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg><svg class="moon-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg></button></div></header>
+
+    <main class="mx-auto max-w-3xl px-4 sm:px-8 prose">
+        <h1 class="subpage-title">RobotCar LiDAR Vehicle Detection</h1>
+        <div class="subpage-meta">
+            <span class="publication-venue">Oxford RobotCar Dataset</span>
+            <span class="subpage-year">2025</span>
+        </div>
+        <div class="subpage-tags">
+            <span class="tag tag-safety">Computer Vision</span>
+            <span class="tag tag-conference">LiDAR</span>
+        </div>
+
+        <section class="subpage-section">
+            <h2>Description</h2>
+            <p>Extended the Oxford RobotCar Dataset SDK with vehicle-aware LiDAR projection. The system uses YOLOv8 segmentation to detect vehicles (cars, trucks, buses, motorcycles) in camera images, then intelligently downsamples the projected LiDAR point cloud: full resolution is preserved on detected vehicles while background points are reduced.</p>
+            <p>This is useful for autonomous driving applications where vehicle detail is critical but full point cloud density is unnecessary everywhere. The tool supports single-frame analysis, video playback with interactive controls, and video export.</p>
+            <p>Also developed a complementary vehicle segmentation pipeline using YOLO + SAM (Segment Anything Model) that produces segmented versions of the dataset imagery with transparent vehicle overlays.</p>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Key Highlights</h2>
+            <ul class="subpage-highlights">
+                <li>Vehicle detection using YOLOv8 segmentation on camera images.</li>
+                <li>Selective LiDAR downsampling: full resolution on vehicles, reduced background.</li>
+                <li>Video playback mode with pause, step-through, and export to MP4.</li>
+                <li>YOLO + SAM segmentation pipeline for dataset annotation.</li>
+                <li>Built on the Oxford RobotCar and Oxford Radar RobotCar datasets.</li>
+            </ul>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Demo</h2>
+            <figure style="margin:1.5rem 0;">
+                <img src="../assets/car-segment.png" alt="YOLO vehicle segmentation example on RobotCar dataset" style="max-width:480px;width:100%;border-radius:8px;display:block;margin:0 auto;" loading="lazy" />
+                <figcaption style="text-align:center;font-size:0.85rem;opacity:0.75;margin-top:0.5rem;">Vehicle segmentation using YOLO on a RobotCar frame.</figcaption>
+            </figure>
+            <figure style="margin:1.5rem 0;">
+                <video controls playsinline muted preload="auto" style="max-width:480px;width:100%;border-radius:8px;display:block;margin:0 auto;">
+                    <source src="../assets/robotcar-output-web.mp4" type="video/mp4" />
+                </video>
+                <figcaption style="text-align:center;font-size:0.85rem;opacity:0.75;margin-top:0.5rem;">Vehicle-aware LiDAR projection output video.</figcaption>
+            </figure>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Tech Stack</h2>
+            <ul class="subpage-highlights">
+                <li><strong>Python / OpenCV / NumPy</strong> &mdash; Core processing and visualization.</li>
+                <li><strong>YOLOv8 (Ultralytics)</strong> &mdash; Real-time vehicle segmentation.</li>
+                <li><strong>SAM (Segment Anything)</strong> &mdash; Fine-grained vehicle segmentation.</li>
+                <li><strong>Open3D</strong> &mdash; 3D point cloud visualization.</li>
+                <li><strong>Oxford RobotCar SDK</strong> &mdash; Dataset loading, camera models, LiDAR processing.</li>
+            </ul>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Links</h2>
+            <div class="subpage-links">
+                <a href="https://github.com/PythonOrC/robotcar-dataset-sdk" target="_blank" rel="noopener" class="subpage-link-btn">GitHub</a>
+                <a href="https://robotcar-dataset.robots.ox.ac.uk" target="_blank" rel="noopener" class="subpage-link-btn">Oxford RobotCar Dataset</a>
+            </div>
+        </section>
+    </main>
+    <div class="mx-auto max-w-3xl px-4 sm:px-8 py-8 text-center text-sm opacity-75"><p>&copy; Hongyi (Ethan) Hu</p></div>
+    <script src="../subpage.js"></script>
+</body>
+</html>
