@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Face Recognition Door Unlock - Hongyi Hu</title>
-    <meta name="description" content="Real-time face recognition system for door access control with anti-spoofing protection">
+    <meta name="description"
+        content="Real-time face recognition system for door access control with anti-spoofing protection">
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
     <link rel="stylesheet" href="../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>(function(){try{var s=localStorage.getItem('theme');var t=s==='dark'||s==='light'?s:'light';document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}})();</script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>(function () { try { var s = localStorage.getItem('theme'); var t = s === 'dark' || s === 'light' ? s : 'light'; document.documentElement.setAttribute('data-theme', t) } catch (e) { document.documentElement.setAttribute('data-theme', 'light') } })();</script>
 </head>
+
 <body class="bg-global-bg text-global-text antialiased subpage-body">
-    <header class="subpage-header"><div class="subpage-header-inner mx-auto max-w-3xl px-4 sm:px-8"><a href="../index.html" class="back-link">&larr; Back to Home</a><button id="theme-toggle" class="flex h-7 w-7 items-center justify-center rounded-md p-1" aria-label="Switch theme"><svg class="sun-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg><svg class="moon-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg></button></div></header>
+    <header class="subpage-header">
+        <div class="subpage-header-inner mx-auto max-w-3xl px-4 sm:px-8"><a href="../index.html"
+                class="back-link">&larr; Back to Home</a><button id="theme-toggle"
+                class="flex h-7 w-7 items-center justify-center rounded-md p-1" aria-label="Switch theme"><svg
+                    class="sun-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        clip-rule="evenodd"></path>
+                </svg><svg class="moon-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg></button></div>
+    </header>
 
     <main class="mx-auto max-w-3xl px-4 sm:px-8 prose">
         <h1 class="subpage-title">Face Recognition Door Unlock System</h1>
@@ -26,20 +41,30 @@
 
         <section class="subpage-section">
             <h2>Description</h2>
-            <p>A real-time face recognition system designed for door access control. The system captures webcam frames, assesses image quality (brightness, blur, lighting uniformity), detects and aligns faces, extracts embeddings, matches against a database, and performs anti-replay checks before granting access.</p>
-            <p>The architecture supports multiple interchangeable detection backends (dlib HOG, dlib CNN, MediaPipe, OpenCV DNN, YOLO) and recognition backends (dlib ResNet, DeepFace with ArcFace/Facenet, AdaFace). An ablation study framework is included for systematic comparison of backend combinations.</p>
+            <p>A real-time face recognition system designed for door access control. The system captures webcam frames,
+                assesses image quality (brightness, blur, lighting uniformity), detects and aligns faces, extracts
+                embeddings, matches against a database, and performs anti-replay checks before granting access.</p>
+            <p>The architecture supports multiple interchangeable detection backends (dlib HOG, dlib CNN, MediaPipe,
+                OpenCV DNN, YOLO) and recognition backends (dlib ResNet, DeepFace with ArcFace/Facenet, AdaFace). An
+                ablation study framework is included for systematic comparison of backend combinations.</p>
         </section>
 
         <section class="subpage-section">
             <h2>System Pipeline</h2>
             <ul class="subpage-highlights">
-                <li><strong>Image Quality Check</strong> &mdash; Brightness, blur/sharpness, and lighting uniformity filtering.</li>
-                <li><strong>Face Detection</strong> &mdash; Pluggable backends: dlib HOG/CNN, MediaPipe, OpenCV DNN, YOLO.</li>
+                <li><strong>Image Quality Check</strong> &mdash; Brightness, blur/sharpness, and lighting uniformity
+                    filtering.</li>
+                <li><strong>Face Detection</strong> &mdash; Pluggable backends: dlib HOG/CNN, MediaPipe, OpenCV DNN,
+                    YOLO.</li>
                 <li><strong>Preprocessing</strong> &mdash; Crop, pad/resize, and optional eye-based alignment.</li>
-                <li><strong>Embedding Extraction</strong> &mdash; dlib ResNet (128-D), DeepFace (varies), or AdaFace (512-D).</li>
-                <li><strong>Database Matching</strong> &mdash; Threshold-based with margin verification for unambiguous matches.</li>
-                <li><strong>Anti-Replay</strong> &mdash; Frame hash comparison and reuse cooldown to detect spoofing.</li>
-                <li><strong>Debug Panel</strong> &mdash; 3&times;3 grid showing intermediate processing images in real time.</li>
+                <li><strong>Embedding Extraction</strong> &mdash; dlib ResNet (128-D), DeepFace (varies), or AdaFace
+                    (512-D).</li>
+                <li><strong>Database Matching</strong> &mdash; Threshold-based with margin verification for unambiguous
+                    matches.</li>
+                <li><strong>Anti-Replay</strong> &mdash; Frame hash comparison and reuse cooldown to detect spoofing.
+                </li>
+                <li><strong>Debug Panel</strong> &mdash; 3&times;3 grid showing intermediate processing images in real
+                    time.</li>
             </ul>
         </section>
 
@@ -47,72 +72,174 @@
             <h2>Demo</h2>
             <h3>Demo 1 (Clip 1)</h3>
             <div class="demo-video-wrap">
-                <iframe
-                    class="demo-video-embed"
-                    src="https://www.youtube.com/embed/ghAfdmn4G8I"
+                <iframe class="demo-video-embed" src="https://www.youtube.com/embed/ghAfdmn4G8I"
                     title="Face Recognition Demo 1 Video (Temporary Link)"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy">
+                    allowfullscreen loading="lazy">
                 </iframe>
             </div>
             <p class="demo-note">Temporary YouTube link for Demo 1:
-                <a href="https://www.youtube.com/watch?v=ghAfdmn4G8I" target="_blank" rel="noopener">https://www.youtube.com/watch?v=ghAfdmn4G8I</a>
+                <a href="https://www.youtube.com/watch?v=ghAfdmn4G8I" target="_blank"
+                    rel="noopener">https://www.youtube.com/watch?v=ghAfdmn4G8I</a>
             </p>
             <h3>Matched Frames (Clip 1)</h3>
             <p class="demo-note">Click any frame to open gallery view.</p>
             <div class="demo-frame-grid">
-                <button type="button" class="demo-frame-btn" data-gallery="clip1" data-src="../assets/face-recognition/clip1/clip1_frame_000381.jpg" data-alt="Clip 1 matched frame 000381"><img src="../assets/face-recognition/clip1/clip1_frame_000381.jpg" alt="Clip 1 matched frame 000381"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip1" data-src="../assets/face-recognition/clip1/clip1_frame_000404.jpg" data-alt="Clip 1 matched frame 000404"><img src="../assets/face-recognition/clip1/clip1_frame_000404.jpg" alt="Clip 1 matched frame 000404"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip1" data-src="../assets/face-recognition/clip1/clip1_frame_000426.jpg" data-alt="Clip 1 matched frame 000426"><img src="../assets/face-recognition/clip1/clip1_frame_000426.jpg" alt="Clip 1 matched frame 000426"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip1" data-src="../assets/face-recognition/clip1/clip1_frame_000449.jpg" data-alt="Clip 1 matched frame 000449"><img src="../assets/face-recognition/clip1/clip1_frame_000449.jpg" alt="Clip 1 matched frame 000449"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip1" data-src="../assets/face-recognition/clip1/clip1_frame_005329.jpg" data-alt="Clip 1 matched frame 005329"><img src="../assets/face-recognition/clip1/clip1_frame_005329.jpg" alt="Clip 1 matched frame 005329"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip1" data-src="../assets/face-recognition/clip1/clip1_frame_005354.jpg" data-alt="Clip 1 matched frame 005354"><img src="../assets/face-recognition/clip1/clip1_frame_005354.jpg" alt="Clip 1 matched frame 005354"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip1" data-src="../assets/face-recognition/clip1/clip1_frame_005580.jpg" data-alt="Clip 1 matched frame 005580"><img src="../assets/face-recognition/clip1/clip1_frame_005580.jpg" alt="Clip 1 matched frame 005580"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip1" data-src="../assets/face-recognition/clip1/clip1_frame_005603.jpg" data-alt="Clip 1 matched frame 005603"><img src="../assets/face-recognition/clip1/clip1_frame_005603.jpg" alt="Clip 1 matched frame 005603"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip1" data-src="../assets/face-recognition/clip1/clip1_frame_005936.jpg" data-alt="Clip 1 matched frame 005936"><img src="../assets/face-recognition/clip1/clip1_frame_005936.jpg" alt="Clip 1 matched frame 005936"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip1"
+                    data-src="../assets/face-recognition/clip1/clip1_frame_000381.jpg"
+                    data-alt="Clip 1 matched frame 000381"><img
+                        src="../assets/face-recognition/clip1/clip1_frame_000381.jpg"
+                        alt="Clip 1 matched frame 000381"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip1"
+                    data-src="../assets/face-recognition/clip1/clip1_frame_000404.jpg"
+                    data-alt="Clip 1 matched frame 000404"><img
+                        src="../assets/face-recognition/clip1/clip1_frame_000404.jpg"
+                        alt="Clip 1 matched frame 000404"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip1"
+                    data-src="../assets/face-recognition/clip1/clip1_frame_000426.jpg"
+                    data-alt="Clip 1 matched frame 000426"><img
+                        src="../assets/face-recognition/clip1/clip1_frame_000426.jpg"
+                        alt="Clip 1 matched frame 000426"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip1"
+                    data-src="../assets/face-recognition/clip1/clip1_frame_000449.jpg"
+                    data-alt="Clip 1 matched frame 000449"><img
+                        src="../assets/face-recognition/clip1/clip1_frame_000449.jpg"
+                        alt="Clip 1 matched frame 000449"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip1"
+                    data-src="../assets/face-recognition/clip1/clip1_frame_005329.jpg"
+                    data-alt="Clip 1 matched frame 005329"><img
+                        src="../assets/face-recognition/clip1/clip1_frame_005329.jpg"
+                        alt="Clip 1 matched frame 005329"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip1"
+                    data-src="../assets/face-recognition/clip1/clip1_frame_005354.jpg"
+                    data-alt="Clip 1 matched frame 005354"><img
+                        src="../assets/face-recognition/clip1/clip1_frame_005354.jpg"
+                        alt="Clip 1 matched frame 005354"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip1"
+                    data-src="../assets/face-recognition/clip1/clip1_frame_005580.jpg"
+                    data-alt="Clip 1 matched frame 005580"><img
+                        src="../assets/face-recognition/clip1/clip1_frame_005580.jpg"
+                        alt="Clip 1 matched frame 005580"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip1"
+                    data-src="../assets/face-recognition/clip1/clip1_frame_005603.jpg"
+                    data-alt="Clip 1 matched frame 005603"><img
+                        src="../assets/face-recognition/clip1/clip1_frame_005603.jpg"
+                        alt="Clip 1 matched frame 005603"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip1"
+                    data-src="../assets/face-recognition/clip1/clip1_frame_005936.jpg"
+                    data-alt="Clip 1 matched frame 005936"><img
+                        src="../assets/face-recognition/clip1/clip1_frame_005936.jpg"
+                        alt="Clip 1 matched frame 005936"></button>
             </div>
 
             <h3>Demo 2 (Clip 2)</h3>
             <div class="demo-video-wrap">
-                <iframe
-                    class="demo-video-embed"
-                    src="https://www.youtube.com/embed/REPLACE_WITH_REAL_DEMO2_ID"
+                <iframe class="demo-video-embed" src="https://www.youtube.com/embed/o3Uz0s1SbbY"
                     title="Face Recognition Demo 2 Video (Temporary Link)"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy">
+                    allowfullscreen loading="lazy">
                 </iframe>
             </div>
             <p class="demo-note">Temporary YouTube link for Demo 2:
-                <a href="https://www.youtube.com/watch?v=REPLACE_WITH_REAL_DEMO2_ID" target="_blank" rel="noopener">https://www.youtube.com/watch?v=REPLACE_WITH_REAL_DEMO2_ID</a>
+                <a href="https://www.youtube.com/watch?v=o3Uz0s1SbbY" target="_blank"
+                    rel="noopener">https://www.youtube.com/watch?v=o3Uz0s1SbbY</a>
             </p>
             <h3>Matched Frames (Clip 2)</h3>
             <p class="demo-note">Click any frame to open gallery view.</p>
             <div class="demo-frame-grid">
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001102.jpg" data-alt="Clip 2 matched frame 001102"><img src="../assets/face-recognition/clip2/clip2_frame_001102.jpg" alt="Clip 2 matched frame 001102"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001162.jpg" data-alt="Clip 2 matched frame 001162"><img src="../assets/face-recognition/clip2/clip2_frame_001162.jpg" alt="Clip 2 matched frame 001162"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001194.jpg" data-alt="Clip 2 matched frame 001194"><img src="../assets/face-recognition/clip2/clip2_frame_001194.jpg" alt="Clip 2 matched frame 001194"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001234.jpg" data-alt="Clip 2 matched frame 001234"><img src="../assets/face-recognition/clip2/clip2_frame_001234.jpg" alt="Clip 2 matched frame 001234"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001276.jpg" data-alt="Clip 2 matched frame 001276"><img src="../assets/face-recognition/clip2/clip2_frame_001276.jpg" alt="Clip 2 matched frame 001276"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001324.jpg" data-alt="Clip 2 matched frame 001324"><img src="../assets/face-recognition/clip2/clip2_frame_001324.jpg" alt="Clip 2 matched frame 001324"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001356.jpg" data-alt="Clip 2 matched frame 001356"><img src="../assets/face-recognition/clip2/clip2_frame_001356.jpg" alt="Clip 2 matched frame 001356"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001385.jpg" data-alt="Clip 2 matched frame 001385"><img src="../assets/face-recognition/clip2/clip2_frame_001385.jpg" alt="Clip 2 matched frame 001385"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001415.jpg" data-alt="Clip 2 matched frame 001415"><img src="../assets/face-recognition/clip2/clip2_frame_001415.jpg" alt="Clip 2 matched frame 001415"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001442.jpg" data-alt="Clip 2 matched frame 001442"><img src="../assets/face-recognition/clip2/clip2_frame_001442.jpg" alt="Clip 2 matched frame 001442"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001472.jpg" data-alt="Clip 2 matched frame 001472"><img src="../assets/face-recognition/clip2/clip2_frame_001472.jpg" alt="Clip 2 matched frame 001472"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001499.jpg" data-alt="Clip 2 matched frame 001499"><img src="../assets/face-recognition/clip2/clip2_frame_001499.jpg" alt="Clip 2 matched frame 001499"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_001533.jpg" data-alt="Clip 2 matched frame 001533"><img src="../assets/face-recognition/clip2/clip2_frame_001533.jpg" alt="Clip 2 matched frame 001533"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_003225.jpg" data-alt="Clip 2 matched frame 003225"><img src="../assets/face-recognition/clip2/clip2_frame_003225.jpg" alt="Clip 2 matched frame 003225"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_003296.jpg" data-alt="Clip 2 matched frame 003296"><img src="../assets/face-recognition/clip2/clip2_frame_003296.jpg" alt="Clip 2 matched frame 003296"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_005239.jpg" data-alt="Clip 2 matched frame 005239"><img src="../assets/face-recognition/clip2/clip2_frame_005239.jpg" alt="Clip 2 matched frame 005239"></button>
-                <button type="button" class="demo-frame-btn" data-gallery="clip2" data-src="../assets/face-recognition/clip2/clip2_frame_005266.jpg" data-alt="Clip 2 matched frame 005266"><img src="../assets/face-recognition/clip2/clip2_frame_005266.jpg" alt="Clip 2 matched frame 005266"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001102.jpg"
+                    data-alt="Clip 2 matched frame 001102"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001102.jpg"
+                        alt="Clip 2 matched frame 001102"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001162.jpg"
+                    data-alt="Clip 2 matched frame 001162"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001162.jpg"
+                        alt="Clip 2 matched frame 001162"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001194.jpg"
+                    data-alt="Clip 2 matched frame 001194"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001194.jpg"
+                        alt="Clip 2 matched frame 001194"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001234.jpg"
+                    data-alt="Clip 2 matched frame 001234"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001234.jpg"
+                        alt="Clip 2 matched frame 001234"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001276.jpg"
+                    data-alt="Clip 2 matched frame 001276"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001276.jpg"
+                        alt="Clip 2 matched frame 001276"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001324.jpg"
+                    data-alt="Clip 2 matched frame 001324"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001324.jpg"
+                        alt="Clip 2 matched frame 001324"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001356.jpg"
+                    data-alt="Clip 2 matched frame 001356"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001356.jpg"
+                        alt="Clip 2 matched frame 001356"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001385.jpg"
+                    data-alt="Clip 2 matched frame 001385"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001385.jpg"
+                        alt="Clip 2 matched frame 001385"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001415.jpg"
+                    data-alt="Clip 2 matched frame 001415"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001415.jpg"
+                        alt="Clip 2 matched frame 001415"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001442.jpg"
+                    data-alt="Clip 2 matched frame 001442"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001442.jpg"
+                        alt="Clip 2 matched frame 001442"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001472.jpg"
+                    data-alt="Clip 2 matched frame 001472"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001472.jpg"
+                        alt="Clip 2 matched frame 001472"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001499.jpg"
+                    data-alt="Clip 2 matched frame 001499"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001499.jpg"
+                        alt="Clip 2 matched frame 001499"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_001533.jpg"
+                    data-alt="Clip 2 matched frame 001533"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_001533.jpg"
+                        alt="Clip 2 matched frame 001533"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_003225.jpg"
+                    data-alt="Clip 2 matched frame 003225"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_003225.jpg"
+                        alt="Clip 2 matched frame 003225"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_003296.jpg"
+                    data-alt="Clip 2 matched frame 003296"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_003296.jpg"
+                        alt="Clip 2 matched frame 003296"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_005239.jpg"
+                    data-alt="Clip 2 matched frame 005239"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_005239.jpg"
+                        alt="Clip 2 matched frame 005239"></button>
+                <button type="button" class="demo-frame-btn" data-gallery="clip2"
+                    data-src="../assets/face-recognition/clip2/clip2_frame_005266.jpg"
+                    data-alt="Clip 2 matched frame 005266"><img
+                        src="../assets/face-recognition/clip2/clip2_frame_005266.jpg"
+                        alt="Clip 2 matched frame 005266"></button>
             </div>
             <div id="demo-lightbox" class="demo-lightbox" hidden>
                 <button type="button" class="demo-lightbox-close" aria-label="Close gallery">&times;</button>
-                <button type="button" class="demo-lightbox-nav demo-lightbox-prev" aria-label="Previous image">&#10094;</button>
+                <button type="button" class="demo-lightbox-nav demo-lightbox-prev"
+                    aria-label="Previous image">&#10094;</button>
                 <img id="demo-lightbox-image" class="demo-lightbox-image" src="" alt="">
-                <button type="button" class="demo-lightbox-nav demo-lightbox-next" aria-label="Next image">&#10095;</button>
+                <button type="button" class="demo-lightbox-nav demo-lightbox-next"
+                    aria-label="Next image">&#10095;</button>
             </div>
         </section>
 
@@ -131,11 +258,14 @@
         <section class="subpage-section">
             <h2>Links</h2>
             <div class="subpage-links">
-                <a href="https://github.com/PythonOrC/FaceRecognition" target="_blank" rel="noopener" class="subpage-link-btn">GitHub</a>
+                <a href="https://github.com/PythonOrC/FaceRecognition" target="_blank" rel="noopener"
+                    class="subpage-link-btn">GitHub</a>
             </div>
         </section>
     </main>
-    <div class="mx-auto max-w-3xl px-4 sm:px-8 py-8 text-center text-sm opacity-75"><p>&copy; Hongyi (Ethan) Hu</p></div>
+    <div class="mx-auto max-w-3xl px-4 sm:px-8 py-8 text-center text-sm opacity-75">
+        <p>&copy; Hongyi (Ethan) Hu</p>
+    </div>
     <script>
         (function () {
             const frameButtons = Array.from(document.querySelectorAll(".demo-frame-btn"));
@@ -200,5 +330,5 @@
     </script>
     <script src="../subpage.js"></script>
 </body>
-</html>
 
+</html>
