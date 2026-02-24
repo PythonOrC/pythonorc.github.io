@@ -29,10 +29,9 @@
     </header>
 
     <main class="mx-auto max-w-3xl px-4 sm:px-8 prose">
-        <h1 class="subpage-title">Face Recognition Door Unlock System</h1>
+        <h1 class="subpage-title">Face Recognition Door Unlock System <span class="project-year">(2026)</span></h1>
         <div class="subpage-meta">
             <span class="publication-venue">Personal Project</span>
-            <span class="subpage-year">2025</span>
         </div>
         <div class="subpage-tags">
             <span class="tag tag-safety">Computer Vision</span>
@@ -66,6 +65,104 @@
                 <li><strong>Debug Panel</strong> &mdash; 3&times;3 grid showing intermediate processing images in real
                     time.</li>
             </ul>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Ablation Results (Latency vs Quality)</h2>
+            <p>
+                The chart below summarizes the best threshold per configuration from
+                <code>FaceRecognition/ablation_results.csv</code>. X-axis is total per-face latency
+                (<code>avg_detection_ms + avg_embedding_ms</code>), and Y-axis is F1 score.
+            </p>
+            <figure class="subpage-figure">
+                <img src="../assets/face-ablation-latency-f1.png" alt="Face recognition ablation chart showing latency vs F1 across detector and recognizer combinations" loading="lazy" />
+                <figcaption>Best-threshold configurations: tradeoff between runtime latency and recognition F1.</figcaption>
+            </figure>
+            <div class="ablation-table-wrap">
+                <table class="ablation-table">
+                    <thead>
+                        <tr>
+                            <th>Config</th>
+                            <th>Threshold</th>
+                            <th>Params</th>
+                            <th>Embed Dim</th>
+                            <th>Total Latency (ms)</th>
+                            <th>FPS Est.</th>
+                            <th>Accuracy</th>
+                            <th>Precision</th>
+                            <th>F1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>mediapipe + dlib</td>
+                            <td>0.60</td>
+                            <td>pad_resize, align=False</td>
+                            <td>128</td>
+                            <td>164.4</td>
+                            <td>6.08</td>
+                            <td>0.966</td>
+                            <td>0.980</td>
+                            <td>0.980</td>
+                        </tr>
+                        <tr>
+                            <td>dlib_hog + dlib</td>
+                            <td>0.60</td>
+                            <td>none, align=True</td>
+                            <td>128</td>
+                            <td>187.3</td>
+                            <td>5.34</td>
+                            <td>0.949</td>
+                            <td>0.941</td>
+                            <td>0.970</td>
+                        </tr>
+                        <tr>
+                            <td>mediapipe + dlib</td>
+                            <td>0.60</td>
+                            <td>pad_resize, align=True</td>
+                            <td>128</td>
+                            <td>207.4</td>
+                            <td>4.82</td>
+                            <td>0.949</td>
+                            <td>0.979</td>
+                            <td>0.969</td>
+                        </tr>
+                        <tr>
+                            <td>dlib_hog + dlib</td>
+                            <td>0.60</td>
+                            <td>resize, align=True</td>
+                            <td>128</td>
+                            <td>188.4</td>
+                            <td>5.31</td>
+                            <td>0.932</td>
+                            <td>0.939</td>
+                            <td>0.958</td>
+                        </tr>
+                        <tr>
+                            <td>yolo + dlib</td>
+                            <td>0.60</td>
+                            <td>pad_resize, align=True</td>
+                            <td>128</td>
+                            <td>256.1</td>
+                            <td>3.91</td>
+                            <td>0.915</td>
+                            <td>0.906</td>
+                            <td>0.950</td>
+                        </tr>
+                        <tr>
+                            <td>dlib_hog + deepface (Facenet512)</td>
+                            <td>0.40</td>
+                            <td>pad_resize, align=True</td>
+                            <td>512</td>
+                            <td>213.0</td>
+                            <td>4.69</td>
+                            <td>0.915</td>
+                            <td>1.000</td>
+                            <td>0.946</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section class="subpage-section">

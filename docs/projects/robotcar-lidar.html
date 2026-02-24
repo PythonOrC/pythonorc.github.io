@@ -14,10 +14,9 @@
     <header class="subpage-header"><div class="subpage-header-inner mx-auto max-w-3xl px-4 sm:px-8"><a href="../index.html" class="back-link">&larr; Back to Home</a><button id="theme-toggle" class="flex h-7 w-7 items-center justify-center rounded-md p-1" aria-label="Switch theme"><svg class="sun-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg><svg class="moon-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg></button></div></header>
 
     <main class="mx-auto max-w-3xl px-4 sm:px-8 prose">
-        <h1 class="subpage-title">RobotCar LiDAR Vehicle Detection</h1>
+        <h1 class="subpage-title">RobotCar LiDAR Vehicle Detection <span class="project-year">(2026)</span></h1>
         <div class="subpage-meta">
             <span class="publication-venue">Oxford RobotCar Dataset</span>
-            <span class="subpage-year">2025</span>
         </div>
         <div class="subpage-tags">
             <span class="tag tag-safety">Computer Vision</span>
@@ -48,12 +47,82 @@
                 <img src="../assets/car-segment.png" alt="YOLO vehicle segmentation example on RobotCar dataset" style="max-width:480px;width:100%;border-radius:8px;display:block;margin:0 auto;" loading="lazy" />
                 <figcaption style="text-align:center;font-size:0.85rem;opacity:0.75;margin-top:0.5rem;">Vehicle segmentation using YOLO on a RobotCar frame.</figcaption>
             </figure>
-            <figure style="margin:1.5rem 0;">
-                <video controls playsinline muted preload="auto" style="max-width:480px;width:100%;border-radius:8px;display:block;margin:0 auto;">
-                    <source src="../assets/robotcar-output-web.mp4" type="video/mp4" />
-                </video>
-                <figcaption style="text-align:center;font-size:0.85rem;opacity:0.75;margin-top:0.5rem;">Vehicle-aware LiDAR projection output video.</figcaption>
+            <div class="demo-video-wrap">
+                <iframe class="demo-video-embed" src="https://www.youtube.com/embed/bEA78tYEju4"
+                    title="RobotCar LiDAR Demo Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen loading="lazy">
+                </iframe>
+            </div>
+            <p class="demo-note">YouTube demo link:
+                <a href="https://www.youtube.com/watch?v=bEA78tYEju4" target="_blank"
+                    rel="noopener">https://www.youtube.com/watch?v=bEA78tYEju4</a>
+            </p>
+        </section>
+
+        <section class="subpage-section">
+            <h2>Runtime Metrics</h2>
+            <p>
+                Quick diagnostics computed from the rendered demo output video. Point counts below are a rendered-pixel
+                proxy (non-dark pixels), useful for relative comparison across frames.
+            </p>
+            <figure class="subpage-figure">
+                <img src="../assets/robotcar-metrics-chart.png" alt="RobotCar output diagnostics chart showing projected point-pixel proxy and frame motion over time" loading="lazy" />
+                <figcaption>Per-frame diagnostics: projected point-pixel proxy and frame-to-frame motion.</figcaption>
             </figure>
+            <div class="ablation-table-wrap">
+                <table class="ablation-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Resolution</td>
+                            <td>1280 x 960</td>
+                            <td>Demo output video size</td>
+                        </tr>
+                        <tr>
+                            <td>FPS</td>
+                            <td>20.0</td>
+                            <td>Encoded output frame rate</td>
+                        </tr>
+                        <tr>
+                            <td>Frame Count</td>
+                            <td>41</td>
+                            <td>Total frames in clip</td>
+                        </tr>
+                        <tr>
+                            <td>Duration</td>
+                            <td>2.05 s</td>
+                            <td>Total clip length</td>
+                        </tr>
+                        <tr>
+                            <td>Real-time Latency Budget</td>
+                            <td>50.0 ms/frame</td>
+                            <td>1000 / FPS budget</td>
+                        </tr>
+                        <tr>
+                            <td>Mean Point-Pixel Proxy</td>
+                            <td>1,188,958.8</td>
+                            <td>Average non-dark pixels per frame</td>
+                        </tr>
+                        <tr>
+                            <td>Peak Point-Pixel Proxy</td>
+                            <td>1,201,629</td>
+                            <td>Max non-dark pixels in a frame</td>
+                        </tr>
+                        <tr>
+                            <td>Min Point-Pixel Proxy</td>
+                            <td>1,178,237</td>
+                            <td>Min non-dark pixels in a frame</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section class="subpage-section">
