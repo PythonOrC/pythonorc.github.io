@@ -25,9 +25,12 @@
 
         <section class="subpage-section">
             <h2>Description</h2>
-            <p>Extended the Oxford RobotCar Dataset SDK with vehicle-aware LiDAR projection. The system uses YOLOv8 segmentation to detect vehicles (cars, trucks, buses, motorcycles) in camera images, then intelligently downsamples the projected LiDAR point cloud: full resolution is preserved on detected vehicles while background points are reduced.</p>
-            <p>This is useful for autonomous driving applications where vehicle detail is critical but full point cloud density is unnecessary everywhere. The tool supports single-frame analysis, video playback with interactive controls, and video export.</p>
-            <p>Also developed a complementary vehicle segmentation pipeline using YOLO + SAM (Segment Anything Model) that produces segmented versions of the dataset imagery with transparent vehicle overlays.</p>
+            <ul class="subpage-highlights">
+                <li><strong>Project goal:</strong> Keep high-value vehicle geometry while reducing background LiDAR load.</li>
+                <li><strong>Method:</strong> YOLOv8 segmentation identifies vehicles, then the projected point cloud is selectively downsampled.</li>
+                <li><strong>Result:</strong> <strong>Full-resolution vehicle regions</strong> with reduced non-vehicle density for faster downstream processing.</li>
+                <li><strong>Tech stack:</strong> Python, OpenCV, NumPy, YOLOv8, SAM, Open3D, Oxford RobotCar SDK.</li>
+            </ul>
         </section>
 
         <section class="subpage-section">

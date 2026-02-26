@@ -40,12 +40,12 @@
 
         <section class="subpage-section">
             <h2>Description</h2>
-            <p>A real-time face recognition system designed for door access control. The system captures webcam frames,
-                assesses image quality (brightness, blur, lighting uniformity), detects and aligns faces, extracts
-                embeddings, matches against a database, and performs anti-replay checks before granting access.</p>
-            <p>The architecture supports multiple interchangeable detection backends (dlib HOG, dlib CNN, MediaPipe,
-                OpenCV DNN, YOLO) and recognition backends (dlib ResNet, DeepFace with ArcFace/Facenet, AdaFace). An
-                ablation study framework is included for systematic comparison of backend combinations.</p>
+            <ul class="subpage-highlights">
+                <li><strong>Project goal:</strong> Deliver secure, real-time face-based door access control.</li>
+                <li><strong>Method:</strong> End-to-end pipeline for quality checks, detection/alignment, embedding, matching, and anti-replay.</li>
+                <li><strong>Result:</strong> <strong>Best detector-recognizer pairs identified</strong> via latency-versus-F1 ablations.</li>
+                <li><strong>Tech stack:</strong> Python, OpenCV, dlib, MediaPipe, DeepFace/AdaFace, YOLOv8, NumPy.</li>
+            </ul>
         </section>
 
         <section class="subpage-section">

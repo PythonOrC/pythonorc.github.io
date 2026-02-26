@@ -8,7 +8,7 @@ Small builds, tools, and side projects.
     <div class="project-card-main">
         <div class="project-card-copy">
             <h3><a href="projects/robotcar-lidar.html" class="publication-link">RobotCar LiDAR Vehicle Detection</a> <span class="project-year">(2026)</span></h3>
-            <p>Vehicle-aware LiDAR projection with YOLO segmentation: full detail on vehicles, downsampled background elsewhere.</p>
+            <p>Vehicle-aware LiDAR projection with selective downsampling for efficient perception.</p>
             <div class="project-tags">
                 <span class="tag tag-safety">Computer Vision</span>
                 <span class="tag tag-conference">LiDAR</span>
@@ -24,7 +24,7 @@ Small builds, tools, and side projects.
     <div class="project-card-main">
         <div class="project-card-copy">
             <h3><a href="projects/face-recognition.html" class="publication-link">Face Recognition Door Unlock</a> <span class="project-year">(2026)</span></h3>
-            <p>Real-time access control pipeline with anti-spoofing and swappable face detection and recognition backends.</p>
+            <p>Real-time face-based access control with anti-spoofing and modular backends.</p>
             <div class="project-tags">
                 <span class="tag tag-safety">Computer Vision</span>
                 <span class="tag tag-conference">ML</span>
@@ -40,7 +40,7 @@ Small builds, tools, and side projects.
     <div class="project-card-main no-preview">
         <div class="project-card-copy">
             <h3><a href="projects/soft-body-snake.html" class="publication-link">Soft Body Robotic Snake</a> <span class="project-year">(2023)</span></h3>
-            <p>Modular pneumatic soft-robot snake with distributed control and biologically inspired locomotion.</p>
+            <p>Modular pneumatic soft-robot snake with distributed control and bio-inspired locomotion.</p>
             <div class="project-tags">
                 <span class="tag tag-safety">Robotics</span>
                 <span class="tag tag-workshop">Hardware</span>
@@ -53,7 +53,7 @@ Small builds, tools, and side projects.
     <div class="project-card-main no-preview">
         <div class="project-card-copy">
             <h3><a href="projects/supermag-api.html" class="publication-link">SuperMAG R API</a> <span class="project-year">(2022)</span></h3>
-            <p>R API for SuperMAG geomagnetic data with broad research adoption and high monthly usage.</p>
+            <p>R API for global geomagnetic data access with broad research adoption.</p>
             <div class="project-tags">
                 <span class="tag tag-interpretability">Space Weather</span>
                 <span class="tag tag-conference">Software</span>

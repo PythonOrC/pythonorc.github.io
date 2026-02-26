@@ -28,9 +28,12 @@
 
         <section class="subpage-section">
             <h2>Description</h2>
-            <p>Investigating map-free thermal navigation for aerial robots in low-light, over-water environments using imitation learning from traditional planners. The project targets a key research question: given that standard RGB pipelines do not provide desirable performance on thermal images, how can we design an image-to-action model trained on and designed for thermal input?</p>
-            <p>Although the project targets aerial robots, I currently train and iterate on a remote car platform outdoors to support rapid data collection and systematic debugging while preserving the core challenges of real low-light navigation: changing illumination, texture ambiguity, and the need for robust state estimation from imperfect observations.</p>
-            <p>The work spans the full pipeline: designing the learning model, collecting multimodal data (thermal, LiDAR, IMU), running traditional planners to generate supervision for imitation learning, and training models that accept different sensor inputs with modality switching.</p>
+            <ul class="subpage-highlights">
+                <li><strong>Project goal:</strong> Achieve map-free thermal navigation in low-light outdoor environments.</li>
+                <li><strong>Method:</strong> Imitation learning from planner supervision with multimodal sensing (thermal, LiDAR, IMU).</li>
+                <li><strong>Result:</strong> <strong>End-to-end thermal perception-to-action pipeline</strong> under active development and field testing.</li>
+                <li><strong>Tech stack:</strong> Python, PyTorch, ROS, thermal sensors, LiDAR, and planner-generated training targets.</li>
+            </ul>
         </section>
 
         <section class="subpage-section">
