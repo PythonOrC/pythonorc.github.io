@@ -9,13 +9,12 @@
                 Global-GMDs: The Global Map of Geomagnetic Disturbances
             </a>
         </h3>
-        <div class="publication-venue">Elsevier SoftwareX</div>
+        <div class="publication-venue"><a href="https://doi.org/10.1016/j.softx.2023.101619" target="_blank" rel="noopener">Elsevier SoftwareX</a></div>
         <div class="publication-authors">Hongyi Hu (First &amp; Corresponding Author), Zhonghua Xu</div>
         <div class="publication-year">2023</div>
         <div class="publication-tags">
             <span class="tag tag-conference">Journal</span>
             <span class="tag tag-interpretability">Space Weather</span>
-            <a href="https://doi.org/10.1016/j.softx.2023.101619" class="tag tag-arxiv">DOI</a>
         </div>
     </div>
 </div>
@@ -26,12 +25,12 @@
     <div class="publication-content">
         <h3 class="publication-title">
             <a href="publications/halloween-storm.html" class="publication-link">
-                Investigating the Space Weather Impact of the 2003 Halloween Geomagnetic Storm by the Ground Magnetic Field Variations: a Global View
+                Global Magnetometer Coverage Efficacy During Geomagnetic Disturbances: A Case Study of the 2003 Halloween Storm
             </a>
         </h3>
         <div class="publication-venue">Under revision at AGU Space Weather</div>
         <div class="publication-authors">Hongyi Hu (First &amp; Corresponding Author), Zhonghua Xu</div>
-        <div class="publication-year">2024&ndash;present</div>
+        <div class="publication-year">2025&ndash;present</div>
         <div class="publication-tags">
             <span class="tag tag-workshop">Under Review</span>
             <span class="tag tag-interpretability">Space Weather</span>
