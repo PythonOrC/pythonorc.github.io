@@ -1,5 +1,5 @@
 <div class="about-header">
-  <img src="https://media.licdn.com/dms/image/v2/D5603AQHC_6rxnKgUhg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1701238269161?e=1772668800&v=beta&t=KGifdMS2FedvwCcq3rqjFKgThxrTM1HGWGwTr-wy_H8" alt="Portrait of Hongyi (Ethan) Hu" class="about-avatar" width="160" height="160" loading="lazy" referrerpolicy="no-referrer" />
+  <img src="assets/profile.png" alt="Portrait of Hongyi (Ethan) Hu" class="about-avatar" width="160" height="160" loading="lazy" />
   <div class="about-header-content">
     <h1 class="title">Hi, I'm Ethan!</h1>
     <div class="about-socials" style="display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;margin-top:0.5rem;">
